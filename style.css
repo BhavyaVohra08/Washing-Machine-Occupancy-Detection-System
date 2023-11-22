@@ -15,16 +15,6 @@ img {
       width: 150px;
 }
 
-.occupancy__img {
-      position: relative;
-}
-
-.occupancy__img > img{
-      position: absolute;
-      top: -80px;
-      left: -85px;
-}
-
 .card__new {
       display: flex;
       flex-direction: row;
@@ -40,4 +30,10 @@ img {
 
 .active {
       display: none;
+}
+
+@media (max-width: 768px) {
+      .card__new {
+            flex-direction: column;
+      }      
 }

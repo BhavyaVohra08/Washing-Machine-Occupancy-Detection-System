@@ -64,16 +64,15 @@ function show (data) {
       console.log(data.feeds[size-1].field1[0]=="-");
       var occupancy = "";
       var comment = "";
-      if(data.feeds[size-1].field1[0]=="-") {
+      if(data.feeds[size-1].field1[0]=="-") { // vacant
             occupancy = `<h1>Vacant</h1>`;
-            comment = '<p>Wait karle madarchod, panvel nikalna hai kya</p>'
-            occupied.classList.toggle('active');
+            comment = '<p>Run fast, else it will get occupied</p>'
+            document.querySelector(".images").src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png"
 
       } else {
             occupancy = `<h1>Occupied</h1>`;
-            comment = '<p>Jaldi ja madarchod, nahi toh woh bhi chud jayegi</p>'
-            occupied.classList.remove('active');
-            vacant.classList.toggle('active');
+            comment = '<p>Please wait...Check after a few minutes</p>'
+            document.querySelector(".images").src="occupied-removebg-preview.png"
       }
       div.innerHTML = occupancy;
       div.innerHTML += comment;

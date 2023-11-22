@@ -9,21 +9,6 @@ console.log(frame)
 const url = "https://api.thingspeak.com/channels/2352418/fields/1.json?results=2"
 
 
-// async function getData (url) {
-//       const response = await fetch(url);
-
-//       var data = await response.json();
-//       console.log(data);
-
-//       if (response) {
-//             hideloader();
-//       }
-//       show(data);
-// }
-
-// getData(url);
-
-
 async function getData(url) {
       try {
           const response = await fetch(url);
@@ -44,7 +29,7 @@ async function getData(url) {
       getData(url); // Get data initially
       setInterval(() => {
           getData(url); // Get data every 10 seconds
-      }, 5000); // 10000 milliseconds = 10 seconds
+      }, 5000); // 5000 milliseconds = 5 seconds
   }
   
   updateDataPeriodically(); // Start updating data
@@ -65,12 +50,12 @@ function show (data) {
       var occupancy = "";
       var comment = "";
       if(data.feeds[size-1].field1[0]=="-") { // vacant
-            occupancy = `<h1>Vacant</h1>`;
+            occupancy = `<h1 style="color: green;">Vacant</h1>`;
             comment = '<p>Run fast, else it will get occupied</p>'
             document.querySelector(".images").src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png"
 
       } else {
-            occupancy = `<h1>Occupied</h1>`;
+            occupancy = `<h1 style="color: red;">Occupied</h1>`;
             comment = '<p>Please wait...Check after a few minutes</p>'
             document.querySelector(".images").src="occupied-removebg-preview.png"
       }

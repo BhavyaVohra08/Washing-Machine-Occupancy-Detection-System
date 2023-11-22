@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body style="background-color: #ade8f4;">
+    <!-- <iframe class="frame" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2352418/widgets/752786"></iframe> -->
+    
+    <div class="heading">
+      <img
+        src="Logo_of_NIT_Jalandhar.png"
+        alt=""
+      />
+      <h1>Washing Maching Occupancy Detection System</h1>
+      <h3>NIT Jalandhar, Punjab</h3>
+    </div>
+
+    <!-- <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Mega Boys Hostel - F
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Mega Boys Hostel - A</a></li>
+        <li><a class="dropdown-item" href="#">Mega Boys Hostel - B</a></li>
+        <li><a class="dropdown-item" href="#">Mega Boys Hostel - F</a></li>
+      </ul>
+    </div> -->
+
+    <select class="form-select" style="width: 50%;" aria-label="Default select example">
+      <option selected value="1">Mega Boys Hostel - F</option>
+      <option value="2">Mega Boys Hostel - A</option>
+      <option value="3">Mega Boys Hostel - B</option>
+    </select>
+    
+    <div class="spinner-border" role="status" id="loading">
+      <span class="sr-only">Loading...</span>
+    </div>
+
+
+    <div class="card__new">
+
+      <div class="occupancy__img">
+        <img class="occupied" src="occupied-removebg-preview.png" class="img-fluid rounded-start" alt="...">
+        <img class="vacant" src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png" class="img-fluid rounded-start" alt="...">
+      </div>
+
+      <div class="occupancy__texts">
+        <h4>Occupancy Status</h4>
+      </div>
+
+    </div>
+
+    <!-- <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img class="occupied" src="occupied-removebg-preview.png" class="img-fluid rounded-start" alt="...">
+          <img class="vacant" src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">Occupied</h3>
+            <p class="card-text">Wait karle madarchod, panvel nikalna hai kya</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

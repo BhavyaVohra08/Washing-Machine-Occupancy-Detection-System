@@ -49,16 +49,19 @@ function show (data) {
       console.log(data.feeds[size-1].field1[0]=="-");
       var occupancy = "";
       var comment = "";
-      if(data.feeds[size-1].field1[0]=="-") { // vacant
-            occupancy = `<h1 style="color: green;">Vacant</h1>`;
-            comment = '<p>Run fast, else it will get occupied</p>'
-            document.querySelector(".images").src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png"
+    //   if(data.feeds[size-1].field1[0]=="-") { // vacant
+    //         occupancy = `<h1 style="color: green;">Vacant</h1>`;
+    //         comment = '<p>Run fast, else it will get occupied</p>'
+    //         document.querySelector(".images").src="washing-machine-isolated-on-white-background-vector-7639505-removebg-preview.png"
 
-      } else {
-            occupancy = `<h1 style="color: red;">Occupied</h1>`;
-            comment = '<p>Please wait...Check after a few minutes</p>'
-            document.querySelector(".images").src="occupied-removebg-preview.png"
-      }
+    //   } else {
+    //         occupancy = `<h1 style="color: red;">Occupied</h1>`;
+    //         comment = '<p>Please wait...Check after a few minutes</p>'
+    //         document.querySelector(".images").src="occupied-removebg-preview.png"
+    //   }
+      occupancy = `<h1 style="color: red;">Occupied</h1>`;
+      comment = '<p>Please wait...Check after a few minutes</p>'
+      document.querySelector(".images").src="occupied-removebg-preview.png"
       div.innerHTML = occupancy;
       div.innerHTML += comment;
 }
